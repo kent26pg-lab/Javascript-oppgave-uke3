@@ -47,3 +47,17 @@ function diceRoller(numberOfDice, sides = 6) {
 console.log(diceRoller(4));    
 console.log(diceRoller(6));      
 console.log(diceRoller(5,20)); 
+
+// oppgave 3
+
+function cleanText(arr) {
+    const cleaned = [];
+
+    for (let word of arr) {
+        word = word.trim().toLowerCase();
+        cleaned.push(word);
+    }
+    return cleaned.join(" ");
+}
+
+console.log(cleanText([" thIS", "teXt  ", " nEeds ", "to", "BE", "cleANED   ", " Up"]));
