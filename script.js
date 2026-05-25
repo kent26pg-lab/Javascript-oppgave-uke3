@@ -122,16 +122,18 @@ console.log(
 );
 
 // Oppgave 4
-
-function doubleSwap(str, charA, charB) {
-  return str
-    .split("")
-    .map((ch) => {
-      if (ch === charA) return charB;
-      if (ch === charB) return charA;
-      return ch;
+// text = teksten vi vil endre
+// charA = den første bokstaven vi vil bytte
+// charB = den andre bokstaven vi vil bytte
+function doubleSwap(text, charA, charB) {
+  return text
+    .split("") /* gjør om alle ordene til et array av enkeltbokstaver */
+    .map((ch) => { 
+      if (ch === charA) return charB; /* Hvis bokstaven er charA, bytt til charB */
+      if (ch === charB) return charA; /*Hvis bokstaven er charB, blir byttet til charA  */
+      return ch; /*  om ordet/arrayen ikke har charA eller charB i seg, skjer det ikke noe med den */
     })
-    .join("");
+    .join(""); /* Dette gjør arrayet om til en en string igjn */
 }
 
 console.log(doubleSwap("this is a string", "i", "s"));
