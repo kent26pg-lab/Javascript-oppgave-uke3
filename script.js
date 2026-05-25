@@ -102,14 +102,18 @@ console.log(diceRoller(6));
 console.log(diceRoller(5, 20)); /* 5 er hvor mange terninger som blir kastet og 20 er mange siden terningen har. her har jeg byttet den vanlige sides som er 6 med 20 */
 
 // oppgave 3
-
+// Dette er hva jeg har kalt funskjonen
 function cleanText(arr) {
-  const cleaned = [];
+  const cleaned = []; /* en tom liste/array der de rensede ordene blir lagret */
 
+//   Går gjennom hvert ord i arrayet
   for (let word of arr) {
+    // hvert ord i lista blir gjort om til små bokstaver og mellomrommene blir fjernet
     word = word.trim().toLowerCase();
+    // legger de rensede ordene i en array igjen
     cleaned.push(word);
   }
+//   Setter alle ordene i listen i  en string med mellomrom mellom hvert ord, vis jeg hadde satt en -. Hadde det blitt - mellom hvert ord
   return cleaned.join(" ");
 }
 
